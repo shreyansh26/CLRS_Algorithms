@@ -1,0 +1,10 @@
+n = ceil(lg(b - a + 1))
+Initialize an array A of length n
+while true do
+	for i = 1 to n do
+ 		A[i] = RANDOM(0; 1)
+ 	end for
+	if A holds the binary representation of one of the numbers in a through b then
+ 		return number represented by A
+ 	end if
+end while
