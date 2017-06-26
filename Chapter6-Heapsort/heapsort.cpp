@@ -36,20 +36,21 @@ void buildHeap(int a[], int n) {
     }
 }
 
-void heapSort(int a[], int n) {
-    buildHeap(a, n);
-    int  i = n-1;
-    for(i=n-1; i>=0; i--) {
-        swap(a[0], a[i]);
-        maxHeapify(a, i, 0);
-    }
-}
-
 void printArray(int a[], int n)
 {
     for (int i=0; i<n; i++)
         cout << a[i] << " ";
     cout << "\n";
+}
+
+void heapSort(int a[], int n) {
+    buildHeap(a, n);
+    int  i = n-1;
+    //printArray(a, i);
+    for(i=n-1; i>=0; i--) {
+        swap(a[0], a[i]);
+        maxHeapify(a, i, 0);
+    }
 }
 
 int main() {
