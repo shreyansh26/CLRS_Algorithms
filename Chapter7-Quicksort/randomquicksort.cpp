@@ -18,9 +18,9 @@ int partitionAr(int a[], int p, int r) {
 }
 
 int randomPartition(int a[], int p, int r) {
-    int i = rand()%(r-p);
+    int i = p + rand()%(r-p);
     //cout<<i<<"\n";
-    swap(a[i], a[r-1]);
+    swap(a[i], a[p]);
     return partitionAr(a, p, r);
 }
 
@@ -39,7 +39,7 @@ void printArray(int a[], int n){
 }
 
 int main() {
-    srand((unsigned)time(0));
+    srand((unsigned)time(NULL));
     int a[] = {2, 5, 3, 9, 1};
     int n = 5;
     randomquicksort(a, 0, n);
