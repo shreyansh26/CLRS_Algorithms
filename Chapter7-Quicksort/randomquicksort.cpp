@@ -20,7 +20,7 @@ int partitionAr(int a[], int p, int r) {
 int randomPartition(int a[], int p, int r) {
     int i = p + rand()%(r-p);
     //cout<<i<<"\n";
-    swap(a[i], a[p]);
+    swap(a[i], a[r-1]);
     return partitionAr(a, p, r);
 }
 
@@ -40,8 +40,8 @@ void printArray(int a[], int n){
 
 int main() {
     srand((unsigned)time(NULL));
-    int a[] = {2, 5, 3, 9, 1};
-    int n = 5;
+    int a[] = {2, 5, 3, 9, 1, 10};
+    int n = 6;
     randomquicksort(a, 0, n);
     printArray(a, n);
     return 0;
