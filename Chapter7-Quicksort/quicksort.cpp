@@ -30,8 +30,8 @@ void printArray(int a[], int n){
 }
 
 int main() {
-    int a[] = {2, 5, 3, 9, 1};
-    int n = 5;
+    int a[] = {2, 5, 3, 9, 1, 10};
+    int n = 6;
     quicksort(a, 0, n);
     printArray(a, n);
     return 0;
