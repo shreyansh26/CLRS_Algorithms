@@ -104,8 +104,11 @@ int main()
     insertVal(5);
     insertVal(4);
     insertVal(45);
+    cout<<heapar[0]<<" "<<heapar[1]<<" "<<heapar[2]<<" "<<heapar[3]<<" "<<heapar[4]<<"\n";
     cout<<extractMax()<<"\n";
+    cout<<heapar[0]<<" "<<heapar[1]<<" "<<heapar[2]<<" "<<heapar[3]<<"\n";
     cout<<getMax()<<"\n";
+    cout<<heapar[1]<<"\n";
     decreaseKey(2, 1);
     cout<<getMax()<<"\n";
     deleteKey(0);
