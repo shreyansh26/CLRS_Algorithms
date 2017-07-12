@@ -21,7 +21,7 @@ Graph::Graph(int V) {
 
 void Graph::addEdge(int u, int v) {
 	adj[u].push_back(v);
-	adj[v].push_back(u);  // For undirected graph
+	//adj[v].push_back(u);  // For undirected graph
 }
 
 void Graph::BFS(int s) {
@@ -62,7 +62,7 @@ int main()
 
     cout << "Following is Breadth First Traversal "
          << "(starting from vertex 2)\n";
-    g.BFS(0);
+    g.BFS(1);
 
     return 0;
 }
