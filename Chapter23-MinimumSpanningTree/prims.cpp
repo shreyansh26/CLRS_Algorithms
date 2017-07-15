@@ -61,8 +61,7 @@ void Graph::primMST(int sc) {
     key[src] = 0;
 
     /* Looping till priority queue becomes empty */
-    while (!pq.empty())
-    {
+    while (!pq.empty()) {
         // The first vertex in pair is the minimum key
         // vertex, extract it from priority queue.
         // vertex label is stored in second of pair (it
@@ -76,8 +75,7 @@ void Graph::primMST(int sc) {
 
         // 'i' is used to get all adjacent vertices of a vertex
         list< pair<int, int> >::iterator i;
-        for (i = adj[u].begin(); i != adj[u].end(); ++i)
-        {
+        for (i = adj[u].begin(); i != adj[u].end(); ++i) {
             // Get vertex label and weight of current adjacent
             // of u.
             int v = (*i).first;
@@ -85,8 +83,7 @@ void Graph::primMST(int sc) {
 
             //  If v is not in MST and weight of (u,v) is smaller
             // than current key of v
-            if (inMST[v] == false && key[v] > weight)
-            {
+            if (inMST[v] == false && key[v] > weight) {
                 // Updating key of v
                 key[v] = weight;
                 pq.push(make_pair(key[v], v));
